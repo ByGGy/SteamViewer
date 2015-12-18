@@ -9,13 +9,29 @@
 		<md-sidenav flex layout="column" layout-fill md-is-locked-open="true" class="md-whiteframe-z2">
 			<p>Search: <input ng-model="query"></p>
 			<md-list>
-				<md-list-item ng-repeat="app in apps | filter:query | limitTo:20 track by app.appid">
+				<md-list-item ng-repeat="app in apps | filter:query | limitTo:20 track by app.appid" ng-click="selectApp(app.appid)">
 					<p>{{app.name}}</p>
 				</md-list-item>
 			</md-list>
 		</md-sidenav>
 	
-		<md-content flex layout="column" layout-fill></md-content>
+		<md-content flex layout="row" layout-fill>
+			<md-list>
+				<md-list-item ng-repeat="post in news">
+					<md-card>
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline">{{post.title}}</span>
+								<span class="md-subhead">{{post.date *1000 | date:'medium'}}</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<p>{{post.contents}}</p>
+						</md-card-content>
+					</md-card>
+				</md-list-item>
+			</md-list>
+		</md-content>
 		
 	</div>
 
