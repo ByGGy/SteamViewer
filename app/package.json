@@ -1,0 +1,15 @@
+{
+  "name": "steamviewer",
+  "version": "0.0.1",
+  "description": "A quick app using steam API to browser steam news",
+  "main": "main.js",
+  "author": "BM",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-material": "^1.0.0",
+    "angular-route": "^1.4.8"
+  }
+}
