@@ -7,8 +7,12 @@
 	<div flex layout="row" layout-fill>
 	
 		<md-sidenav flex layout="column" layout-fill md-is-locked-open="true" class="md-whiteframe-z2">
-			<input ng-model="test"/>
-			<p>{{test}}</p>
+			<p>Search: <input ng-model="query"></p>
+			<md-list>
+				<md-list-item ng-repeat="app in apps | filter:query | limitTo:20 track by app.appid">
+					<p>{{app.name}}</p>
+				</md-list-item>
+			</md-list>
 		</md-sidenav>
 	
 		<md-content flex layout="column" layout-fill></md-content>

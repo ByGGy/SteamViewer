@@ -1,4 +1,4 @@
-var steamApp = angular.module('steamApp', ['ngMaterial', 'ngRoute', 'steamControllers']);
+var steamApp = angular.module('steamApp', ['ngMaterial', 'ngRoute', 'steamControllers', 'steamServices']);
 
 steamApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
